@@ -1,4 +1,4 @@
-module github.com/TicketsBot/common
+module github.com/jadevelopmentgrp/utilities
 
 go 1.22
 
