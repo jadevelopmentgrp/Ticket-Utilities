@@ -1,4 +1,4 @@
-module github.com/jadevelopmentgrp/utilities
+module github.com/jadevelopmentgrp/ticket-utilities
 
 go 1.22
 
