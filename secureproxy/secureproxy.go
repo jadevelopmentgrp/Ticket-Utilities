@@ -9,8 +9,6 @@ import (
 	"io/ioutil"
 	"net/http"
 	"strconv"
-
-	"github.com/jadevelopmentgrp/Tickets-Utilities/sentry"
 )
 
 type Client struct {
@@ -64,7 +62,7 @@ func (p *Client) DoRequest(method, url string, headers map[string]string, bodyDa
 
 	res, err := p.client.Post(p.Url+"/proxy", "application/json", bytes.NewBuffer(encoded))
 	if err != nil {
-		sentry.Error(err)
+		fmt.Print(err)
 		return nil, 0, errors.New("error proxying request")
 	}
 

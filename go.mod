@@ -3,23 +3,19 @@ module github.com/jadevelopmentgrp/Tickets-Utilities
 go 1.22
 
 require (
-	github.com/getsentry/sentry-go v0.21.0
-	github.com/go-errors/errors v1.4.2
 	github.com/go-redis/redis/v8 v8.11.3
 	github.com/google/uuid v1.6.0
 	github.com/jackc/pgx/v4 v4.18.3
 	github.com/jadevelopmentgrp/Tickets-Database v1.0.2
 	github.com/klauspost/compress v1.17.8
 	github.com/rxdn/gdl v0.0.0-20240612163900-621eccf40179
-	github.com/sirupsen/logrus v1.9.0
+	github.com/sirupsen/logrus v1.9.0 // indirect
 	github.com/stretchr/testify v1.8.2
 	go.uber.org/zap v1.13.0
 	golang.org/x/sync v0.8.0
 )
 
 require (
-	github.com/TicketsBot/common v0.0.0-20241117150316-ff54c97b45c1
-	github.com/TicketsBot/database v0.0.0-20241116234225-cdf216a9ffca
 	github.com/panjf2000/ants/v2 v2.10.0
 	github.com/pkg/errors v0.9.1
 	github.com/twmb/franz-go v1.18.0
@@ -27,6 +23,7 @@ require (
 )
 
 require (
+	github.com/BurntSushi/toml v1.2.1 // indirect
 	github.com/TicketsBot/ttlcache v1.6.1-0.20200405150101-acc18e37b261 // indirect
 	github.com/boltdb/bolt v1.3.1 // indirect
 	github.com/cespare/xxhash/v2 v2.1.1 // indirect
@@ -57,5 +54,5 @@ require (
 	golang.org/x/text v0.19.0 // indirect
 	golang.org/x/tools v0.21.1-0.20240508182429-e35e4ccd0d2d // indirect
 	gopkg.in/yaml.v3 v3.0.1 // indirect
-	nhooyr.io/websocket v1.8.4 // indirect
+	nhooyr.io/websocket v1.8.17 // indirect
 )
