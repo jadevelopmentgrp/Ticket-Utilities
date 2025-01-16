@@ -2,8 +2,9 @@ package premium
 
 import (
 	"context"
-	"github.com/TicketsBot/common/model"
+
 	"github.com/go-redis/redis/v8"
+	"github.com/jadevelopmentgrp/Tickets-Utilities/model"
 )
 
 func (p *PremiumLookupClient) GetTierByUser(ctx context.Context, userId uint64, includeVoting bool) (PremiumTier, error) {

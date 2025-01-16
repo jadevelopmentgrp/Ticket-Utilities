@@ -2,10 +2,11 @@ package premium
 
 import (
 	"context"
-	"github.com/TicketsBot/common/model"
-	"github.com/TicketsBot/common/sentry"
-	"github.com/rxdn/gdl/objects/guild"
+	"fmt"
 	"time"
+
+	"github.com/jadevelopmentgrp/Tickets-Utilities/model"
+	"github.com/rxdn/gdl/objects/guild"
 )
 
 const GracePeriod = time.Hour // TODO: Reduce this to zero?
@@ -24,16 +25,14 @@ func (p *PremiumLookupClient) GetTierByGuild(ctx context.Context, guild guild.Gu
 				})
 
 				if err != nil {
-					sentry.Error(err)
+					fmt.Print(err)
 				}
 			}()
 		}
 	}()
 
 	// check entitlements db
-	subscriptions, err := sentry.WithSpan2(ctx, "ListGuildSubscriptions", func(span *sentry.Span) ([]model.GuildEntitlementEntry, error) {
-		return p.database.Entitlements.ListGuildSubscriptions(ctx, guild.Id, guild.OwnerId, GracePeriod)
-	})
+	subscriptions, err := p.database.Entitlements.ListGuildSubscriptions(ctx, guild.Id, guild.OwnerId, GracePeriod)
 	if err != nil {
 		return None, "", err
 	}

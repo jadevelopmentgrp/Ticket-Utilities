@@ -4,9 +4,10 @@ import (
 	"context"
 	"encoding/json"
 	"fmt"
-	"github.com/TicketsBot/common/webproxy"
-	"github.com/pkg/errors"
 	"net/http"
+
+	"github.com/jadevelopmentgrp/Tickets-Utilities/webproxy"
+	"github.com/pkg/errors"
 )
 
 type BloxlinkResponse struct {

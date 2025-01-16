@@ -2,9 +2,10 @@ package statusupdates
 
 import (
 	"context"
-	"github.com/TicketsBot/common/utils"
-	"github.com/go-redis/redis/v8"
 	"strconv"
+
+	"github.com/go-redis/redis/v8"
+	"github.com/jadevelopmentgrp/Tickets-Utilities/utils"
 )
 
 const channel = "tickets:statusupdates"

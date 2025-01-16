@@ -1,9 +1,10 @@
 package observability
 
 import (
-	"github.com/getsentry/sentry-go"
-	"go.uber.org/zap/zapcore"
+	"fmt"
 	"os"
+
+	"go.uber.org/zap/zapcore"
 )
 
 type Environment string
@@ -24,18 +25,10 @@ func ZapSentryAdapter(environment Environment) func(core zapcore.Core) zapcore.C
 			if entry.Level == zapcore.ErrorLevel {
 				hostname, _ := os.Hostname()
 
-				sentry.CaptureEvent(&sentry.Event{
-					Environment: environment.String(),
-					Extra: map[string]any{
-						"caller": entry.Caller.String(),
-						"stack":  entry.Stack,
-					},
-					Level:      sentry.LevelError,
-					Message:    entry.Message,
-					ServerName: hostname,
-					Timestamp:  entry.Time,
-					Logger:     entry.LoggerName,
-				})
+				fmt.Printf("ERROR\nHostname: %s\nENV: %s\nExtra: %s\nMessage: %s\nTimestamp: %s\nLogger: %s", hostname, environment.String(), map[string]any{
+					"caller": entry.Caller.String(),
+					"stack":  entry.Stack,
+				}, entry.Message, entry.Time, entry.LoggerName)
 			}
 
 			return nil

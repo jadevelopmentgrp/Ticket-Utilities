@@ -3,15 +3,16 @@ package closerelay
 import (
 	"context"
 	"encoding/json"
-	"github.com/TicketsBot/common/utils"
+
 	"github.com/go-redis/redis/v8"
+	"github.com/jadevelopmentgrp/Tickets-Utilities/utils"
 )
 
 type TicketClose struct {
-	GuildId        uint64 `json:"guild_id"`
-	TicketId       int    `json:"ticket_id"`
-	UserId         uint64 `json:"user_id"`
-	Reason         string `json:"reason"`
+	GuildId  uint64 `json:"guild_id"`
+	TicketId int    `json:"ticket_id"`
+	UserId   uint64 `json:"user_id"`
+	Reason   string `json:"reason"`
 }
 
 const key = "tickets:close"

@@ -3,9 +3,10 @@ package closerequest
 import (
 	"context"
 	"encoding/json"
-	"github.com/TicketsBot/common/utils"
-	"github.com/TicketsBot/database"
+
 	"github.com/go-redis/redis/v8"
+	database "github.com/jadevelopmentgrp/Tickets-Database"
+	"github.com/jadevelopmentgrp/Tickets-Utilities/utils"
 )
 
 const channel = "tickets:closerequest:timer"

@@ -2,7 +2,8 @@ package premium
 
 import (
 	"context"
-	"github.com/TicketsBot/common/model"
+
+	"github.com/jadevelopmentgrp/Tickets-Utilities/model"
 	"github.com/rxdn/gdl/objects/guild"
 	"github.com/rxdn/gdl/rest/ratelimit"
 )

@@ -3,8 +3,9 @@ package tokenchange
 import (
 	"context"
 	"encoding/json"
-	"github.com/TicketsBot/common/utils"
+
 	"github.com/go-redis/redis/v8"
+	"github.com/jadevelopmentgrp/Tickets-Utilities/utils"
 )
 
 const channel = "tickets:tokenchange"
@@ -16,7 +17,8 @@ type TokenChangeData struct {
 }
 
 func PublishTokenChange(client *redis.Client, data TokenChangeData) error {
-	marshalled, err := json.Marshal(data); if err != nil {
+	marshalled, err := json.Marshal(data)
+	if err != nil {
 		return err
 	}
 

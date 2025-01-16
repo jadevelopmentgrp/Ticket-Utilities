@@ -2,7 +2,8 @@ package rpc
 
 import (
 	"context"
-	"github.com/TicketsBot/common/utils"
+
+	"github.com/jadevelopmentgrp/Tickets-Utilities/utils"
 	"github.com/twmb/franz-go/pkg/kgo"
 	"go.uber.org/atomic"
 	"go.uber.org/zap"

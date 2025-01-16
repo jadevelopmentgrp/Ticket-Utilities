@@ -2,9 +2,10 @@ package premium
 
 import (
 	"context"
-	"github.com/TicketsBot/common/model"
-	"github.com/TicketsBot/database"
+
 	"github.com/go-redis/redis/v8"
+	database "github.com/jadevelopmentgrp/Tickets-Database"
+	"github.com/jadevelopmentgrp/Tickets-Utilities/model"
 	"github.com/rxdn/gdl/cache"
 	"github.com/rxdn/gdl/objects/guild"
 	"github.com/rxdn/gdl/rest/ratelimit"
