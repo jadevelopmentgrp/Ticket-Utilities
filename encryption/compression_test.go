@@ -1,8 +1,9 @@
 package encryption
 
 import (
-	"github.com/stretchr/testify/require"
 	"testing"
+
+	"github.com/stretchr/testify/require"
 )
 
 func TestCompressDecompress(t *testing.T) {

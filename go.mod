@@ -5,7 +5,7 @@ go 1.22
 require (
 	github.com/go-redis/redis/v8 v8.11.3
 	github.com/google/uuid v1.6.0
-	github.com/jackc/pgx/v4 v4.18.3
+	github.com/jackc/pgx/v4 v4.18.3 // indirect
 	github.com/jadevelopmentgrp/Tickets-Database v1.0.2
 	github.com/klauspost/compress v1.17.8
 	github.com/rxdn/gdl v0.0.0-20240612163900-621eccf40179

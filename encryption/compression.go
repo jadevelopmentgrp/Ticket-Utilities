@@ -1,8 +1,9 @@
 package encryption
 
 import (
-	"github.com/klauspost/compress/zstd"
 	"runtime"
+
+	"github.com/klauspost/compress/zstd"
 )
 
 var compressor, _ = zstd.NewWriter(nil,
